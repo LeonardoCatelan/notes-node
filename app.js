@@ -4,7 +4,22 @@ const yargs = require('yargs');
 
 const notes = require('./notes.js');
 
-var argv = yargs.argv;
+var argv = yargs
+.command('add', 'Add a new note', {
+    title: {
+        describe: 'Title of note',
+        demand: true,
+        alias: 't'
+    },
+    body: {
+        describe: 'Body of the note',
+        demand: true,
+        alias: 'b'
+    }
+
+})
+.help()
+.argv;
 var command = argv._[0]
 
 if(command === 'add'){
