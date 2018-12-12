@@ -1,5 +1,3 @@
-console.log('Starting notes.js');
-
 const fs = require('fs');
 
 var fetchNotes = () => {
@@ -65,21 +63,5 @@ module.exports = {
     removeNotes,
     logNote
 }
-/* 
-    console.log(module);
-    module.exports.age = 21;
-*/
-
-
-/* module.exports.addNote = () => {
-    console.log('addNote')  
-    return 'New node';
-};
- */
-
-/* module.exports.soma = (a, b) => {
-    console.log(a+b)
-}
- */
 
  
