@@ -21,7 +21,9 @@ if(command === 'add'){
         console.log('Title duplicated, note not stored');
     }
 }else if (command === 'list'){
-    notes.getAll();
+    var allNotes = notes.getAll();
+    console.log(`Printing ${allNotes.length} note(s)`);
+    allNotes.forEach((note) => notes.logNote(note));
 }else if(command === 'read'){
     var note = notes.getNotes(argv.title);
     if(note){
